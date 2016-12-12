@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CT>
+  <Type ID="1" Name="Performance Monitoring">
+    <CurveSubType ID="1">Power Curve</CurveSubType>
+    <CurveSubType ID="2">Blade Pitch Curve</CurveSubType>
+    <CurveSubType ID="3">Rotor Curve</CurveSubType>    
+  </Type>
+
+  <Type  ID="2"  Name="Continuous Monitoring">
+    <CurveSubType ID="1">Random Curve</CurveSubType> 
+  </Type>
+  
+  <Type  ID="3"  Name="Condition Monitoring">
+    <CurveSubType ID="1">Random Curve</CurveSubType>
+  </Type>
+</CT>

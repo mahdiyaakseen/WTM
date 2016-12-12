@@ -1,0 +1,9 @@
+﻿@model WTMApp.Models.PlotMonitoringTypeViewModel
+
+<div>
+   @Html.DropDownListFor(m => m.SelectedID, Model.MonitoringTypes)
+   @Html.ValidationMessageFor(m => m.SelectedID)        
+</div>
+<p>  
+</p>
+

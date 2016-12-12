@@ -227,6 +227,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\XMLFile1.xml" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -264,6 +265,8 @@
     <Content Include="Scripts\jquery-3.1.1.slim.min.js" />
     <Content Include="Scripts\jquery-3.1.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.1.1.min.map" />
+    <Content Include="Views\PlotViewer\Index.cshtml" />
+    <Content Include="Views\PlotViewer\_PlotMonitoringTypeSelectorPartial.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -312,6 +315,7 @@
     <Compile Include="Controllers\DataApiController.cs" />
     <Compile Include="Controllers\DataViewerController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PlotViewerController.cs" />
     <Compile Include="Filters\MvcErrorHandlerAttribute.cs" />
     <Compile Include="Hubs\DataHub.cs" />
     <Compile Include="Http\CompressedHttpContent.cs" />
@@ -319,6 +323,8 @@
     <Compile Include="Logging\CommonOwinLogger.cs" />
     <Compile Include="Logging\CommonOwinLoggerFactory.cs" />
     <Compile Include="Models\DataSourcesViewModel.cs" />
+    <Compile Include="Models\Plot.cs" />
+    <Compile Include="Models\PlotMonitoringTypeViewModel.cs" />
     <Compile Include="Models\TagSearchResultViewModel.cs" />
     <Compile Include="Models\TagSnapshotValuesViewModel.cs" />
     <Compile Include="IOAuthTokenStore.cs" />
@@ -326,6 +332,7 @@
     <Compile Include="OwinExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
