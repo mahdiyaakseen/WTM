@@ -1,0 +1,54 @@
+﻿@using Microsoft.AspNet.Identity
+@{
+    var owinContext = Request.GetOwinContext();
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Example App Store Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="@Url.Action("Index", "Home")">
+                    <div class="app-icon">
+                        <i class="fa fa-fw fa-empire" title="Example App Store Application"></i>
+                    </div>
+                </a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        @if (owinContext.Authentication.User.Identity.IsAuthenticated) {
+                            <a href="@Url.Content("~/auth/logout")" title="Click here to log out">
+                                <i class="fa fa-fw fa-user-circle"></i>
+                                <span>@owinContext.Authentication.User.Identity.GetUserName()</span>
+                            </a>
+                        }
+                        else {
+                            <a href="@Url.Action("Login", "Home")" title="Click here to log in">
+                                <i class="fa fa-fw fa-user-circle"></i>
+                                <span>Log In</span>
+                            </a>
+                        }
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid body-content">
+        <div style="margin-top: 65px;">
+            @RenderBody()
+        </div>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
